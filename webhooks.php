@@ -5,7 +5,7 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = 'UmFl1quCcNQ+XeZjNj1+9Brsm0E4cVFcBykgRx7cS4rW38bvzNNIC5XLoeCrnoVvtLdl2QL922VfbctFRV81wqGGhGmSL9BpAFyZR1LVNhJARwmtqsrLIhMPMv9bepYCDXxPx02GtKxq60VZlLOQiwdB04t89/1O/w1cDnyilFU=';
 $channelSecret ='a364e502f850dee2daa56e53984c6738';
-$idPush ='Ufcb2ee177c87a0a6410bc2ff3d97a4a9';
+$idPush ='stamp5415';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
