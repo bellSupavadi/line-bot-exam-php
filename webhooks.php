@@ -3,7 +3,16 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-$access_token = 'XXXXXXXXX';
+$access_token = 'UmFl1quCcNQ+XeZjNj1+9Brsm0E4cVFcBykgRx7cS4rW38bvzNNIC5XLoeCrnoVvtLdl2QL922VfbctFRV81wqGGhGmSL9BpAFyZR1LVNhJARwmtqsrLIhMPMv9bepYCDXxPx02GtKxq60VZlLOQiwdB04t89/1O/w1cDnyilFU=';
+$channelSecret ='a364e502f850dee2daa56e53984c6738';
+$idPush ='tongty_z';
+
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$response = $bot->pushMessage($idPush, $textMessageBuilder);
+
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 // Get POST body content
 $content = file_get_contents('php://input');
